@@ -6,7 +6,7 @@ export const Dashboard = () => {
     return (
         <>
             <Navbar />
-            <div className="max-w-full min-h-full bg-gradient-to-b from-terciary to-primary overflow-hidden">
+            <div className="max-w-full max-h-screen bg-gradient-to-b from-terciary to-primary overflow-hidden">
                 <div className="flex justify-between pt-40">
                     <div className="font-sans max-w-lg ml-40 mt-32">
                         <h1 className="text-7xl">

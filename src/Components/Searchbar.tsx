@@ -12,7 +12,7 @@ export const Searchbar = ({ onSearch }: SearchbarProps) => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center gap-2 pt-44">
+        <div className="flex flex-col items-center justify-center gap-2 pt-44 z-0">
             <h1 className="text-5xl">800 <strong>Pokemons</strong> for you to choose your favorite</h1>
             <div className="mt-4 w-full text-center">
                 <input type="search"
