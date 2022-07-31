@@ -51,18 +51,17 @@ export const PokeCard = ({ pokemonData, pokemon }: PokecardProps) => {
         <>
             {searchError.isError && <p>{searchError.errorMessage}</p>}
             {pokemonCardData &&
-                <div className="flex ml-20">
-                    <div className="flex flex-col justify-around items-center bg-zinc-200 rounded-l-2xl p-4">
+                <div className="flex ml-32">
+                    <div className="flex flex-col justify-around items-center w-1/2 bg-zinc-200 rounded-l-2xl p-4">
                         <p>{pokemonCardData.name.charAt(0).toUpperCase() + pokemonCardData.name.slice(1)}</p>
                         <div className="flex gap-4">
-                            {pokemonCardData.types.map((type) => {
+                            {pokemonCardData.types.slice(0, 2).map((type) => {
                                 const pokemonType = type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1)
                                 return (
                                     <p key={type.slot}>{pokemonType}</p>
                                 )
                             })}
                         </div>
-
                     </div>
                     <div className="bg-sky-600 rounded-r-2xl p-4">
                         <img src={pokemonCardData.sprites.front_default} alt={pokemonCardData.name} />
